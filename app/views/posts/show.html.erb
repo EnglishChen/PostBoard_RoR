@@ -1,6 +1,23 @@
-<p>
-	<%= @post.title%>
-	<%= @post.content%>
-</p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8 well">
+			<h3><%=@post.title%></h3>
+			<p>
+			<%= @post.content%>
+			</p>
+		</div>
+	</div>
 
-<%= link_to 'go back to all posts', posts_path %>
+	<hr>
+	<h4><strong>All Comments</strong></h4>
+	<% @post.comments.each do |comment|%>
+	<div class="row">
+		<div class="col-md-8 well">
+			<p><%= comment.content%></p>
+		</div>
+	</div>
+	<%end%>
+	<div class="row">
+		<%= link_to 'go back to all posts', posts_path %>
+	</div>
+</div>
