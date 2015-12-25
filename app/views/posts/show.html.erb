@@ -2,12 +2,13 @@
 
 <div class="row">
   <div class="col-md-8 well">
-    <h3><%= @post.title %></h3>
-    <p>
+    <%= render partial: "categories/category", collection: @post.categories %>
+    <h3><strong><%= @post.title %></strong></h3>
+    <p><u>
       <%= @post.content %>
-    </p>
+    </u></p>
     <br>
-    <small>posted by </small><%= " #{@post.user.name}" %>
+    <small>posted by a handsome boy ...</small><%= " #{@post.user.name}" %>
   </div>
 </div>
 
@@ -20,7 +21,7 @@
         <%= comment.content %>
       </p>
       <br>
-      <small>commented by </small><%= "#{comment.user.name}" %>
+      <small>commented by a pretty girl ...</small><%= "#{comment.user.name}" %>
     </div>
   </div>
 <% end %>
