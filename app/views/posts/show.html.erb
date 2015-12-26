@@ -1,6 +1,6 @@
 <%= render 'shared/title', title: "#{@post.title}"%>
 
-<div class="row">
+<div class="row" id="post">
   <div class="col-md-8 well">
     <%= render partial: "categories/category", collection: @post.categories %>
     <h3><strong><%= @post.title %></strong></h3>
@@ -8,14 +8,14 @@
       <%= @post.content %>
     </u></p>
     <br>
-    <small>posted by a handsome boy ...</small><%= " #{@post.user.name}" %>
+    <small>posted by a handsome boy ...</small><%= " #{@post.user}" %>
   </div>
 </div>
 
 <h4>All Comments:</h4>
 
 <% @post.comments.each do |comment| %>
-  <div class="row">
+  <div class="row" id="comments">
     <div class="col-md-6 well">
       <p>
         <%= comment.content %>

@@ -1,6 +1,6 @@
 <%= render 'shared/title', title: 'New Post'%>
 <hr>
-<div class="well col-md-12">
+<div class="well col-md-12" id="newpost">
   <%= form_for @post do |f| %>
     <div class="form-group">
       <%= f.label :title %>

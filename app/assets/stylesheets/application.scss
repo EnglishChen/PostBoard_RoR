@@ -16,6 +16,72 @@
 
 @import "bootstrap";
 
+header:after aside:after .content:after,
+footer:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
 .container {
 	margin-left: 135px;
+}
+
+.navbar {
+	background-color: #7b68ee;
+	color: black;
+}
+
+.navbar-nav:hover {
+	background-color: rgba(251, 189, 251, 0.4);
+	color: rgb(222, 71, 158);
+	text-decoration: underline;
+	width: 100px;
+}
+.nav {
+	background-color: rgba(194, 190, 216, 0.6);
+	color: black;
+	border-radius:10px;
+	font-weight: bold;
+}
+
+#showpost{
+	border-style: dashed;
+	border-width:3px;
+	border-radius:15px;
+	background-color: rgba(244, 251, 123, 0.5);
+}
+#showpost:hover {
+	background-color: rgba(185, 227, 236, 0.8);
+	border-style: groove;
+	border-width: 5px;
+	border-color: rgba(248, 173, 233, 0.8);
+}
+
+#showpost h4{
+	font-weight: bold;
+	font-style: italic;
+	font-family: Arial, sans-serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+#showpost p{
+	text-transform: capitalize;
+	line-height: 10px;
+	text-align: center;
+}
+
+#showpost .showit{
+	text-align: right;
+}
+#post .col-md-8 {
+	border-style: ridge;
+	border-width:5px;
+	border-color: #939699;
+}
+
+#comments .col-md-6 {
+	border-style: dotted;
+	border-width:3px;
 }
